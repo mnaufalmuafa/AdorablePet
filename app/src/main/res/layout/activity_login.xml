@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    tools:context=".Login">
+
+    <ImageView
+        android:layout_width="78dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="36dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/RL"/>
+
+    <RelativeLayout
+        android:id="@+id/RL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tmplt_card_login"
+        android:paddingBottom="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/TVLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="25sp"
+            android:paddingTop="25dp"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/ETUsername"
+            android:hint="@string/hint_username"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginLeft="38dp"
+            android:paddingLeft="15dp"
+            android:textSize="13sp"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/tmplt_edittextlogin"
+            android:layout_below="@+id/TVLogin"/>
+
+        <EditText
+            android:id="@+id/ETPassword"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:textSize="13sp"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:background="@drawable/tmplt_edittextlogin"
+            android:layout_below="@+id/ETUsername"/>
+
+        <LinearLayout
+            android:id="@+id/LL1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ETPassword"
+            android:layout_marginTop="17dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/BtnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:text="Sign In"
+                android:textAllCaps="false"
+                android:background="@drawable/tmplt_btn_login"
+                android:layout_marginLeft="48dp"
+                android:layout_below="@+id/ETPassword"/>
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:text="Remember my account" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/LL1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/link"
+                android:text="Forget Password?"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/link"
+                android:text="Create Account"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
