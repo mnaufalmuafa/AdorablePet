@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "896110289647",
+    "firebase_url": "https://gallo-648c8.firebaseio.com",
+    "project_id": "gallo-648c8",
+    "storage_bucket": "gallo-648c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896110289647:android:ff19dc2204397b9aa0311a",
+        "android_client_info": {
+          "package_name": "com.example.adorablepet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896110289647-s6mpananl7a8dkpj3m7sd9ejtio4b1g4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGQZ2-54q0MJ9XMxn2VHnLA6Vw91s_feQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896110289647-s6mpananl7a8dkpj3m7sd9ejtio4b1g4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896110289647:android:a1994fed36d39643a0311a",
+        "android_client_info": {
+          "package_name": "com.example.gallo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896110289647-ssuf9lsauot2ijcd8t991hbeohns6avn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gallo",
+            "certificate_hash": "79066f72d627dfb7cc3f4ce7f66b3c599b99556d"
+          }
+        },
+        {
+          "client_id": "896110289647-s6mpananl7a8dkpj3m7sd9ejtio4b1g4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGQZ2-54q0MJ9XMxn2VHnLA6Vw91s_feQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896110289647-s6mpananl7a8dkpj3m7sd9ejtio4b1g4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
