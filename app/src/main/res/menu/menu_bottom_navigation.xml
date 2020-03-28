@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/missing"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Missing" />
+    <item
+        android:id="@+id/checkup"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="Check up" />
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+    <item
+        android:id="@+id/donation"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Donation" />
+    <item
+        android:id="@+id/deposit"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Deposit" />
+</menu>
