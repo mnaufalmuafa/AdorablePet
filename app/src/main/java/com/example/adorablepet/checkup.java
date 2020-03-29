@@ -18,6 +18,7 @@ public class checkup extends AppCompatActivity {
 
         //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setItemIconTintList(null);
 
         //set home selected
         bottomNavigationView.setSelectedItemId(R.id.checkup);
@@ -30,20 +31,24 @@ public class checkup extends AppCompatActivity {
                     case R.id.missing:
                         startActivity(new Intent(getApplicationContext(),missing.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.checkup:
                         return true;
                     case R.id.home :
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.donation:
                         startActivity(new Intent(getApplicationContext(),Donation.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.deposit :
                         startActivity(new Intent(getApplicationContext(),deposit.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                 }
                 return false;

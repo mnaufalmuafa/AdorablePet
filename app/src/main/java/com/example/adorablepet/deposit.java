@@ -18,6 +18,7 @@ public class deposit extends AppCompatActivity {
 
         //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setItemIconTintList(null);
 
         //set home selected
         bottomNavigationView.setSelectedItemId(R.id.deposit);
@@ -30,18 +31,22 @@ public class deposit extends AppCompatActivity {
                     case R.id.missing:
                         startActivity(new Intent(getApplicationContext(),missing.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.checkup:
                         startActivity(new Intent(getApplicationContext(),checkup.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.home :
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.donation:
                         startActivity(new Intent(getApplicationContext(),Donation.class));
                         overridePendingTransition(0,0);
+                        finish();
                         return true;
                     case R.id.deposit :
                         return true;

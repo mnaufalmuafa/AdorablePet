@@ -8,4 +8,5 @@
     <color name="black">#000000</color>
     <color name="link">#34A6FF</color>
     <color name="BtnLogin">#EB7D00</color>
+    <color name="bottom_navigation_fill">#ECECEC</color>
 </resources>
