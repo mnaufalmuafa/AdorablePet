@@ -4,10 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -20,7 +22,15 @@ public class MainActivity extends AppCompatActivity {
 
         //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        TextView TVAnimalCare = findViewById(R.id.TVAnimalCare);
+        TextView TVFood = findViewById(R.id.TVFood);
+        TextView TVDrink = findViewById(R.id.TVDrink);
+        Typeface customfont=Typeface.createFromAsset(getAssets(),"font/YuGothR.ttf");
+
         bottomNavigationView.setItemIconTintList(null);
+        TVAnimalCare.setTypeface(customfont);
+        TVFood.setTypeface(customfont);
+        TVDrink.setTypeface(customfont);
 
         //set home selected
         bottomNavigationView.setSelectedItemId(R.id.home);
