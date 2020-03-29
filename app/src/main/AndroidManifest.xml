@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".deposit"></activity>
+        <activity android:name=".SearchProduk"></activity>
+        <activity android:name=".deposit" />
         <activity android:name=".Donation" />
         <activity android:name=".checkup" />
         <activity android:name=".missing" />

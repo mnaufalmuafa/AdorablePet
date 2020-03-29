@@ -6,40 +6,47 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.Menu;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class SearchProduk extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_search_produk);
 
-        //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        LinearLayout LLFood = findViewById(R.id.LLFood);
-        LinearLayout LLDrink = findViewById(R.id.LLDrink);
+        ImageView BtnBack = findViewById(R.id.BtnBack);
         TextView TVAnimalCare = findViewById(R.id.TVAnimalCare);
-        TextView TVFood = findViewById(R.id.TVFood);
-        TextView TVDrink = findViewById(R.id.TVDrink);
         Typeface customfont=Typeface.createFromAsset(getAssets(),"font/YuGothR.ttf");
+        final EditText ETSearchBar = findViewById(R.id.ETSearchBar);
 
         bottomNavigationView.setItemIconTintList(null);
         TVAnimalCare.setTypeface(customfont);
-        TVFood.setTypeface(customfont);
-        TVDrink.setTypeface(customfont);
 
-        //set home selected
+        ETSearchBar.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                if (i == EditorInfo.IME_ACTION_SEARCH) {
+                    Toast toast = Toast.makeText(getApplicationContext(), ETSearchBar.getText().toString(), Toast.LENGTH_SHORT);
+                    toast.show();
+                    return true;
+                }
+                return false;
+            }
+        });
+
         bottomNavigationView.setSelectedItemId(R.id.home);
 
-        //Perform item selected listener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -71,17 +78,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        LLFood.setOnClickListener(new View.OnClickListener() {
+        BtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,SearchProduk.class));
-            }
-        });
-
-        LLDrink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,SearchProduk.class));
+                finish();
             }
         });
     }

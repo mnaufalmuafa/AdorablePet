@@ -42,7 +42,6 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
         android:paddingTop="2dp"
-
         android:paddingLeft="13dp"
         android:background="@drawable/tmplt_card_login"
         app:layout_constraintStart_toStartOf="parent"
