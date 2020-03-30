@@ -3,7 +3,9 @@ package com.example.adorablepet;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
@@ -74,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
         LLFood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferences mSettings = getSharedPreferences("Kategori", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = mSettings.edit();
+                editor.putBoolean("isFood",true);
+                editor.apply();
                 startActivity(new Intent(MainActivity.this,SearchProduk.class));
             }
         });
@@ -81,6 +87,10 @@ public class MainActivity extends AppCompatActivity {
         LLDrink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferences mSettings = getSharedPreferences("Kategori", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = mSettings.edit();
+                editor.putBoolean("isFood",false);
+                editor.apply();
                 startActivity(new Intent(MainActivity.this,SearchProduk.class));
             }
         });
