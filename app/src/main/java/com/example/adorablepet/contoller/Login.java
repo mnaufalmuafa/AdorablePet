@@ -1,4 +1,4 @@
-package com.example.adorablepet;
+package com.example.adorablepet.contoller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adorablepet.R;
 import com.example.adorablepet.model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -77,8 +78,6 @@ public class Login extends AppCompatActivity {
                                     SharedPreferences.Editor editor = mSettings.edit();
                                     editor.putBoolean("isLogin",true);
                                     editor.apply();
-                                    Toast toast = Toast.makeText(getApplicationContext(), "Remember account", Toast.LENGTH_LONG);
-                                    toast.show();
                                 }
                                 startActivity(home);
                                 finish();

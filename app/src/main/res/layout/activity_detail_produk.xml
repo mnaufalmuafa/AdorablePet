@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contoller.DetailProduk">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/primary"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/TVAnimalCare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Animal Care"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="7dp"
+        android:src="@drawable/ic_notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="7dp"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/BtnBack"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/btn_back"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Toolbar"/>
+
+    <TextView
+        android:id="@+id/TVDetailProduk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DETAIL PRODUCT"
+        android:textColor="@color/black"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BtnBack"
+        app:layout_constraintTop_toBottomOf="@+id/Toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="29dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:gravity="top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVDetailProduk">
+
+        <ImageView
+            android:id="@+id/IVProduk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="75"
+            android:src="@drawable/placeholder" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:paddingLeft="12dp">
+
+            <TableRow
+                android:layout_marginTop="4dip" >
+
+                <TextView
+                    android:id="@+id/TVLabelName"
+                    android:layout_width="wrap_content"
+                    android:text="Product Name"
+                    android:textSize="10sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/TVTitikDua1"
+                    android:layout_width="wrap_content"
+                    android:text=":"
+                    android:textSize="10sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/TVName"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/black"
+                    android:layout_weight="1" >
+
+                </TextView>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="3.5dp">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#707070"
+                    android:layout_weight="3"/>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_marginTop="9.5dip" >
+
+                <TextView
+                    android:id="@+id/TVLabelUsageFor"
+                    android:text="Usage For"
+                    android:layout_width="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/TVTitikDua2"
+                    android:layout_width="wrap_content"
+                    android:text=":"
+                    android:textSize="10sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/TVUsageFor"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:textSize="10sp"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="3.5dp">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#707070"
+                    android:layout_weight="3"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="14.5dp"
+                android:background="@drawable/tmplt_rectangle_row"
+                android:paddingTop="9dip"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    android:id="@+id/TVLabelAvailableStore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="Available Store"
+                    android:textColor="#000000"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/TVTitikDua3"
+                    android:layout_width="wrap_content"
+                    android:text=":"
+                    android:textColor="#000000"
+                    android:textSize="10sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    tools:listitem="@layout/item_toko"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="4dip"
+                android:paddingTop="0dp"
+                android:background="@drawable/tmplt_rectangle_row"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/TVLabelDescription"
+                    android:text="Description"
+                    android:layout_width="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"/>
+
+                <TextView
+                    android:id="@+id/TVTitikDua4"
+                    android:layout_width="wrap_content"
+                    android:text=":"
+                    android:textSize="10sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/TVDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:textSize="10sp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:text="">
+
+                </TextView>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewButton"
+        android:layout_width="103dp"
+        android:layout_height="36dp"
+        android:background="@drawable/tmplt_btn_open_maps"
+        android:layout_marginBottom="51dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/TVOpenMaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OPEN MAPS"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/viewButton"
+        app:layout_constraintEnd_toEndOf="@+id/viewButton"
+        app:layout_constraintTop_toTopOf="@+id/viewButton"
+        app:layout_constraintBottom_toBottomOf="@+id/viewButton"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconSize="40dp"
+        app:itemBackground="@color/bottom_navigation_fill"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_bottom_navigation"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

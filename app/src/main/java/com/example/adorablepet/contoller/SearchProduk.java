@@ -1,9 +1,8 @@
-package com.example.adorablepet;
+package com.example.adorablepet.contoller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
@@ -15,11 +14,13 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adorablepet.R;
 import com.example.adorablepet.adapter.ProdukAdapter;
 import com.example.adorablepet.model.Produk;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -72,7 +73,7 @@ public class SearchProduk extends AppCompatActivity {
                     Produk produk = dataSnapshot1.getValue(Produk.class);
                     dataProduk.add(produk);
                 }
-                adapter = new ProdukAdapter(dataProduk);
+                adapter = new ProdukAdapter(dataProduk,SearchProduk.this);
                 rv.setLayoutManager(new GridLayoutManager(SearchProduk.this, 3));
                 rv.setAdapter(adapter);
             }
@@ -91,7 +92,7 @@ public class SearchProduk extends AppCompatActivity {
                     Produk produk = dataSnapshot1.getValue(Produk.class);
                     dataProduk.add(produk);
                 }
-                adapter = new ProdukAdapter(dataProduk);
+                adapter = new ProdukAdapter(dataProduk,SearchProduk.this);
                 rv.setLayoutManager(new GridLayoutManager(SearchProduk.this, 3));
                 rv.setAdapter(adapter);
             }
@@ -106,6 +107,11 @@ public class SearchProduk extends AppCompatActivity {
         ETSearchBar.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                View view = SearchProduk.this.getCurrentFocus();
+                if (view != null) {
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                }
                 TVWarning.setVisibility(View.INVISIBLE);
                 if (i == EditorInfo.IME_ACTION_SEARCH) {
                     dataProduk.clear();
@@ -127,7 +133,7 @@ public class SearchProduk extends AppCompatActivity {
                                             dataProduk.add(produk);
                                     }
                                     if (dataProduk.size() > 0) {
-                                        adapter = new ProdukAdapter(dataProduk);
+                                        adapter = new ProdukAdapter(dataProduk,SearchProduk.this);
                                         rv.setLayoutManager(new GridLayoutManager(SearchProduk.this, 3));
                                         rv.setAdapter(adapter);
                                     }
@@ -159,7 +165,7 @@ public class SearchProduk extends AppCompatActivity {
                                             dataProduk.add(produk);
                                     }
                                     if (dataProduk.size() > 0) {
-                                        adapter = new ProdukAdapter(dataProduk);
+                                        adapter = new ProdukAdapter(dataProduk,SearchProduk.this);
                                         rv.setLayoutManager(new GridLayoutManager(SearchProduk.this, 3));
                                         rv.setAdapter(adapter);
                                     }

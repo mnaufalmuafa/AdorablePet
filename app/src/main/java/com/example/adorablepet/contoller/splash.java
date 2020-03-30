@@ -1,4 +1,4 @@
-package com.example.adorablepet;
+package com.example.adorablepet.contoller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.TextView;
+
+import com.example.adorablepet.R;
 
 public class splash extends AppCompatActivity {
 

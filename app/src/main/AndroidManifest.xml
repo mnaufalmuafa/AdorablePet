@@ -9,20 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchProduk"></activity>
-        <activity android:name=".deposit" />
-        <activity android:name=".Donation" />
-        <activity android:name=".checkup" />
-        <activity android:name=".missing" />
-        <activity android:name=".Login" />
-        <activity android:name=".splash">
+        <activity android:name=".contoller.DetailProduk"></activity>
+        <activity android:name=".contoller.SearchProduk" />
+        <activity android:name=".contoller.deposit" />
+        <activity android:name=".contoller.Donation" />
+        <activity android:name=".contoller.checkup" />
+        <activity android:name=".contoller.missing" />
+        <activity android:name=".contoller.Login" />
+        <activity android:name=".contoller.splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".contoller.MainActivity" />
     </application>
 
 </manifest>

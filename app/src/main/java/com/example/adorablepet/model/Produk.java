@@ -2,6 +2,7 @@ package com.example.adorablepet.model;
 
 public class Produk {
     private int id;
+    private String urlToko;
     public String linkFoto;
     public String nama;
     public String usageFor;
@@ -11,8 +12,11 @@ public class Produk {
         //NOT IMPLEMENTED
     }
 
-    public Produk(int id, String nama) {
-        this.id = id;
-        this.nama = nama;
+    public int getId() {
+        return id;
+    }
+
+    public String getUrlToko() {
+        return urlToko;
     }
 }

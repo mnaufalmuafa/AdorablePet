@@ -1,4 +1,4 @@
-package com.example.adorablepet;
+package com.example.adorablepet.contoller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,21 +7,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.adorablepet.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class missing extends AppCompatActivity {
+public class checkup extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_missing);
+        setContentView(R.layout.activity_checkup);
 
         //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setItemIconTintList(null);
 
         //set home selected
-        bottomNavigationView.setSelectedItemId(R.id.missing);
+        bottomNavigationView.setSelectedItemId(R.id.checkup);
 
         //Perform item selected listener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -29,11 +30,11 @@ public class missing extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.missing:
-                        return true;
-                    case R.id.checkup:
-                        startActivity(new Intent(getApplicationContext(),checkup.class));
+                        startActivity(new Intent(getApplicationContext(),missing.class));
                         overridePendingTransition(0,0);
                         finish();
+                        return true;
+                    case R.id.checkup:
                         return true;
                     case R.id.home :
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));

@@ -1,4 +1,4 @@
-package com.example.adorablepet;
+package com.example.adorablepet.contoller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,21 +7,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.adorablepet.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Donation extends AppCompatActivity {
+public class deposit extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_donation);
+        setContentView(R.layout.activity_deposit);
 
         //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setItemIconTintList(null);
 
         //set home selected
-        bottomNavigationView.setSelectedItemId(R.id.donation);
+        bottomNavigationView.setSelectedItemId(R.id.deposit);
 
         //Perform item selected listener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -44,11 +45,11 @@ public class Donation extends AppCompatActivity {
                         finish();
                         return true;
                     case R.id.donation:
-                        return true;
-                    case R.id.deposit :
-                        startActivity(new Intent(getApplicationContext(),deposit.class));
+                        startActivity(new Intent(getApplicationContext(),Donation.class));
                         overridePendingTransition(0,0);
                         finish();
+                        return true;
+                    case R.id.deposit :
                         return true;
                 }
                 return false;

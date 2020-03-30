@@ -7,7 +7,7 @@
     android:background="@color/primary"
     android:paddingLeft="25dp"
     android:paddingRight="25dp"
-    tools:context=".Login">
+    tools:context=".contoller.Login">
 
     <ImageView
         android:layout_width="78dp"
